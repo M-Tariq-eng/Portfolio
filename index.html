@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tariq Afridi— Software Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Cabinet+Grotesk:wght@300;400;500;700;800&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Animated Background Elements -->
+<canvas id="bg-canvas"></canvas>
+<div class="bg-aurora"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+<div class="geo geo-1"></div>
+<div class="geo geo-2"></div>
+<div class="geo geo-3"></div>
+<div class="scan-line"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-text">Tariq Afridi</div>
+  <div class="loader-sub">Software Developer</div>
+  <div class="loader-line"></div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">
+    <!-- <img src="" alt="Bilantro" class="nav-logo-img" onerror="this.style.display='none'"> -->
+    <span class="nav-logo-text">TA.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Hire Me</a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#projects" onclick="closeMobile()">Projects</a>
+  <a href="#skills" onclick="closeMobile()">Skills</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ═══════════════════════════════════ HERO ══════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg-gradient"></div>
+  <div class="hero-grid"></div>
+  <canvas id="particles"></canvas>
+
+  <div class="hero-inner">
+    <!-- Left -->
+    <div class="hero-content">
+      <div class="hero-badge"><div class="hero-badge-dot"></div> Available for Projects</div>
+      <h1 class="hero-name">
+        <span class="first">Tariq</span>
+        <span class="last neon-text">Afridi</span>
+      </h1>
+      <div class="hero-role">
+        <span>Software Developer</span>
+        <span class="hero-role-sep">/</span>
+      </div>
+      <p class="hero-desc">
+        Building <strong>modern web applications</strong>, scalable JavaScript solutions, and dynamic user interfaces. From frontend design & APIs to full-stack development — I turn ideas into fast, interactive, and user-friendly digital experiences.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-blue">View My Work</a>
+        <a href="resume.pdf" class="btn-outline" download="">Download CV</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-num">1<em>+</em></div><div class="stat-lbl">Year</div></div>
+        <div class="stat-div"></div>
+        <div class="stat-item"><div class="stat-num">10<em>+</em></div><div class="stat-lbl">Projects</div></div>
+        <div class="stat-div"></div>
+        <div class="stat-item"><div class="stat-num">8<em>+</em></div><div class="stat-lbl">Clients</div></div>
+      </div>
+    </div>
+
+    <!-- Right — Photo -->
+    <div class="hero-photo-col">
+      <div class="hero-photo-scene" id="photoScene">
+        <div class="photo-line photo-line-1"></div>
+        <div class="photo-line photo-line-2"></div>
+        <div class="photo-line photo-line-3"></div>
+        <div class="photo-corner photo-corner-tl"></div>
+        <div class="photo-corner photo-corner-tr"></div>
+        <div class="photo-corner photo-corner-bl"></div>
+        <div class="photo-corner photo-corner-br"></div>
+        <div class="float-tag float-tag-1">SQL<span class="tag-val">Expert</span></div>
+        <div class="float-tag float-tag-2">Software<span class="tag-val">Engineer</span></div>
+        <img src="main.png" alt="Bilal Ahmed" class="hero-photo-img" id="heroPhoto">
+        <div class="hero-photo-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-line glow-line-anim"></div>
+
+<!-- ═══════════════════════════════════ ABOUT ════════════════════════════════ -->
+<section id="about">
+  <div class="section-inner">
+    <div class="reveal"><span class="section-eyebrow">About Me</span></div>
+    <h2 class="section-title reveal d1">Who I Am &amp;<br>What I Do</h2>
+    <div class="about-grid">
+      <div class="about-text reveal d2">
+         <p>I'm a <strong>JavaScript Developer and Web Specialist</strong> with a passion for building scalable, high-performance applications. I focus on writing clean, efficient code and creating seamless user experiences across modern web platforms.</p>
+        <p>I specialize in <strong>full-stack web development</strong> — covering frontend interfaces, backend APIs, databases, and performance optimization. Whether it's a dynamic web app or a complete system, I build solutions that are fast, reliable, and user-focused.</p>
+         <p>Beyond development, I <strong>create modern, responsive websites</strong> that help businesses establish a strong online presence, improve user engagement, and drive real results.</p>
+        <div class="about-tags">
+          <span class="about-tag">JavaScript Expert</span>
+          <span class="about-tag">Front end Dev</span>
+          <span class="about-tag">Backend Focused</span>
+          <span class="about-tag">UI/UX Focused</span>
+          <span class="about-tag">Problem Solver</span>
+        </div>
+      </div>
+      <div class="skill-cats reveal d3">
+        <div class="skill-cat">
+          <div class="skill-cat-label">Programming Languages</div>
+          <div class="skill-cat-items">
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">HTML / CSS</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <div class="skill-cat-label">Web &amp; Design</div>
+          <div class="skill-cat-items">
+            <span class="skill-pill hi">Business Websites</span>
+            <span class="skill-pill">Landing Pages</span>
+            <span class="skill-pill">Brand Presence</span>
+            <span class="skill-pill">UI / UX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-line glow-line-anim"></div>
+<div class="glow-line glow-line-anim"></div>
+
+<!-- ═══════════════════════════════════ PROJECTS ═════════════════════════════ -->
+<!-- <section id="projects">
+  <div class="section-inner">
+    <span class="section-eyebrow">Selected Work</span>
+    <h2 class="section-title">Projects</h2>
+     <h2 class="section-title">Nill</h2> -->
+    <!-- <p class="section-sub">Real-world frontend projects built with HTML, CSS, JavaScript & modern UI practices.</p>
+
+    <div class="projects-grid"> -->
+
+      <!-- Todo App -->
+      <!-- <div class="proj-card wide">
+        <div class="proj-thumb">
+          <img src="" class="proj-img-thumb" alt="Todo App">
+          <div class="proj-img-overlay"></div>
+        </div>
+
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="proj-tag">JavaScript</span>
+            <span class="proj-tag">Local Storage</span>
+            <span class="proj-tag">CRUD App</span>
+          </div>
+
+          <div class="proj-title">Advanced To-Do App</div> -->
+
+          <!-- <p class="proj-desc">
+            A fully functional task manager built with vanilla JavaScript.
+            Includes add, delete, edit, and persistent storage using localStorage.
+            Focused on clean UX and real-world functionality.
+          </p> -->
+
+          <!-- <a href="#" class="proj-link">
+            View Project →
+          </a> -->
+        <!-- </div>
+      </div> -->
+
+      <!-- Weather App -->
+      <!-- <div class="proj-card narrow">
+        <div class="proj-thumb">
+          <img src="images/weather app.jpg" class="proj-img-thumb" alt="Weather App">
+          <div class="proj-img-overlay"></div>
+        </div>
+
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="proj-tag">API</span>
+            <span class="proj-tag">JavaScript</span>
+          </div>
+
+          <div class="proj-title">Weather App</div>
+
+          <p class="proj-desc">
+            Real-time weather application using API integration.
+            Shows temperature, humidity, and weather conditions by city search.
+          </p> -->
+
+          <!-- <a href="#" class="proj-link">View Project →</a> -->
+        <!-- </div>
+      </div> -->
+
+      <!-- Portfolio Website -->
+      <!-- <div class="proj-card half">
+        <div class="proj-thumb">
+          <img src="images/portfolio.jpg" class="proj-img-thumb" alt="Portfolio">
+          <div class="proj-img-overlay"></div>
+        </div>
+
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="proj-tag">HTML</span>
+            <span class="proj-tag">CSS</span>
+            <span class="proj-tag">Responsive</span>
+          </div>
+
+          <div class="proj-title">Personal Portfolio Website</div>
+
+          <p class="proj-desc">
+            Modern animated portfolio website with glassmorphism UI,
+            scroll animations, and responsive layout for all devices.
+          </p> -->
+
+          <!-- <a href="#" class="proj-link">View Project →</a> -->
+        <!-- </div>
+      </div> -->
+
+      <!-- Landing Page -->
+      <!-- <div class="proj-card half">
+        <div class="proj-thumb">
+          <img src="images/cargonova.png" class="proj-img-thumb" alt="Landing Page">
+          <div class="proj-img-overlay"></div>
+        </div>
+
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="proj-tag">Bootstrap</span>
+            <span class="proj-tag">UI Design</span>
+          </div> -->
+
+          <!-- <div class="proj-title">Modern Landing Page</div>
+
+          <p class="proj-desc">
+            High-conversion landing page design built with Bootstrap.
+            Focus on clean UI, CTA optimization, and responsiveness.
+          </p> -->
+
+          <!-- <a href="#" class="proj-link">View Project →</a> -->
+        <!-- </div>
+      </div>
+
+    </div>
+  </div> -->
+<!-- </section> -->
+
+<div class="glow-line glow-line-anim"></div>
+
+<!-- ═══════════════════════════════════ SKILLS ═══════════════════════════════ -->
+<section id="skills">
+  <div class="section-inner">
+
+    <span class="section-eyebrow">Expertise</span>
+    <h2 class="section-title">Technical<br>Skills</h2>
+
+    <div class="skills-grid">
+
+      <!-- BARS -->
+      <div class="bars">
+
+        <div class="bar-item">
+          <div class="bar-head">
+            <span class="bar-name">HTML5</span>
+            <span class="bar-pct">95%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" data-w="95"></div></div>
+        </div>
+
+        <div class="bar-item">
+          <div class="bar-head">
+            <span class="bar-name">CSS3 (Flexbox + Grid)</span>
+            <span class="bar-pct">90%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" data-w="90"></div></div>
+        </div>
+
+        <div class="bar-item">
+          <div class="bar-head">
+            <span class="bar-name">JavaScript (ES6+)</span>
+            <span class="bar-pct">65%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" data-w="65"></div></div>
+        </div>
+
+        <div class="bar-item">
+          <div class="bar-head">
+            <span class="bar-name">Bootstrap</span>
+            <span class="bar-pct">85%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" data-w="85"></div></div>
+        </div>
+
+        <div class="bar-item">
+          <div class="bar-head">
+            <span class="bar-name">Tailwind CSS</span>
+            <span class="bar-pct">75%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" data-w="75"></div></div>
+        </div>
+
+        <div class="bar-item">
+          <div class="bar-head">
+            <span class="bar-name">jQuery</span>
+            <span class="bar-pct">70%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" data-w="70"></div></div>
+        </div>
+
+         <div class="bar-item">
+          <div class="bar-head">
+            <span class="bar-name">SQL</span>
+            <span class="bar-pct">70%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" data-w="70"></div></div>
+        </div>
+
+      </div>
+
+      <!-- ORB ICONS -->
+      <div class="skill-orb-grid">
+
+        <div class="sorb">
+          <div class="sorb-icon"><i class="fa-brands fa-html5"></i></div>
+          <div class="sorb-name">HTML5</div>
+        </div>
+
+        <div class="sorb">
+          <div class="sorb-icon"><i class="fa-brands fa-css3-alt"></i></div>
+          <div class="sorb-name">CSS3</div>
+        </div>
+
+        <div class="sorb">
+          <div class="sorb-icon"><i class="fa-brands fa-js"></i></div>
+          <div class="sorb-name">JavaScript</div>
+        </div>
+
+        <div class="sorb">
+          <div class="sorb-icon"><i class="fa-brands fa-bootstrap"></i></div>
+          <div class="sorb-name">Bootstrap</div>
+        </div>
+
+        <div class="sorb">
+          <div class="sorb-icon"><i class="fa-solid fa-wind"></i></div>
+          <div class="sorb-name">Tailwind</div>
+        </div>
+
+
+
+        <div class="sorb">
+          <div class="sorb-icon"><i class="fa-solid fa-code"></i></div>
+          <div class="sorb-name">Responsive UI</div>
+        </div>
+
+        <div class="sorb">
+          <div class="sorb-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <div class="sorb-name">Frontend Dev</div>
+        </div>
+
+        <div class="sorb">
+          <div class="sorb-icon"><i class="fa-solid fa-bug"></i></div>
+          <div class="sorb-name">Debugging</div>
+        </div>
+
+        <div class="sorb">
+          <div class="sorb-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <div class="sorb-name">Problem Solving</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<div class="glow-line glow-line-anim"></div>
+
+<!-- ═══════════════════════════════════ CONTACT ══════════════════════════════ -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="reveal"><span class="section-eyebrow">Let's Connect</span></div>
+    <h2 class="section-title reveal d1">Start a<br>Conversation</h2>
+    <div class="contact-grid">
+      <div class="reveal d2">
+        <p class="contact-intro">I build modern, responsive, and interactive frontend experiences — from business websites to custom web applications. If you have a design idea or want a smooth, user-focused interface, I can turn it into a real, high-quality product. Let’s build something impactful together.</p>
+        <div class="contact-links">
+          <a href="mailto:tariqafridi.cs@gmail.com" class="c-link">
+            <div class="c-link-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div><div class="c-link-label">Email</div><div class="c-link-val">tariqafridi.cs@gmail.com</div></div>
+          </a>
+          <a href="https://wa.me/923159468661" target="_blank" class="c-link">
+            <div class="c-link-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div><div class="c-link-label">WhatsApp</div><div class="c-link-val">+92 315 946 661</div></div>
+          </a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+          <a href="https://github.com/Muhammad-Tariq301" target="_blank" class="social-link github">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/muhammad-tariq-9120653a1" target="_blank" class="social-link linkedin">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" class="social-link instagram">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+      <div class="reveal d3">
+        <div class="c-form">
+          <div class="f-row">
+            <div class="f-group"><label class="f-label">First Name</label><input type="text" class="f-input" placeholder="John"></div>
+            <div class="f-group"><label class="f-label">Last Name</label><input type="text" class="f-input" placeholder="Doe"></div>
+          </div>
+          <div class="f-group"><label class="f-label">Email</label><input type="email" class="f-input" placeholder="john@company.com"></div>
+          <div class="f-group"><label class="f-label">Message</label><textarea class="f-textarea" placeholder="Tell me about your project..."></textarea></div>
+          <button class="f-btn" onclick="handleSubmit(this)">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo">Tariq Afridi</div>
+  <div class="f-copy">© 2025 Tariq Afridi · All rights reserved</div>
+  <div class="f-socials">
+    <a href="mailto:tariqafridi.cs@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://wa.me/923159468661" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://github.com/Muhammad-Tariq301" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/muhammad-tariq-9120653a1" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  </div>
+</footer>
+
+<script>
+/* ── LOADER ── */
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('loader').classList.add('hide'), 3000);
+});
+
+/* ── NAV SCROLL ── */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50), { passive: true });
+
+/* ── HAMBURGER ── */
+document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
+document.getElementById('mobileClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+/* ── SCROLL REVEAL ── */
+const revealEls = document.querySelectorAll('.reveal');
+const ro = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
+}, { threshold: 0.1 });
+revealEls.forEach(el => ro.observe(el));
+
+/* ── SKILL BARS ── */
+const barObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.querySelectorAll('.bar-fill').forEach(b => b.style.width = b.dataset.w + '%');
+      barObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+const barsEl = document.querySelector('.bars');
+if(barsEl) barObs.observe(barsEl);
+
+/* ── HERO PARTICLES ── */
+(function() {
+  const canvas = document.getElementById('particles');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, pts = [];
+  function resize() {
+    W = canvas.width = canvas.parentElement.offsetWidth;
+    H = canvas.height = canvas.parentElement.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+  for (let i = 0; i < 70; i++) {
+    pts.push({ x: Math.random()*W, y: Math.random()*H, vx: (Math.random()-.5)*.35, vy: (Math.random()-.5)*.35, r: Math.random()*1.2+.3, o: Math.random()*.4+.1 });
+  }
+  let mx = W/2, my = H/2;
+  window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
+  function draw() {
+    ctx.clearRect(0,0,W,H);
+    pts.forEach((p, i) => {
+      p.x += p.vx; p.y += p.vy;
+      if(p.x < 0) p.x = W; if(p.x > W) p.x = 0;
+      if(p.y < 0) p.y = H; if(p.y > H) p.y = 0;
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.fillStyle = `rgba(100,132,255,${p.o})`; ctx.fill();
+      pts.slice(i+1).forEach(q => {
+        const d = Math.hypot(p.x-q.x, p.y-q.y);
+        if(d < 90) {
+          ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y);
+          ctx.strokeStyle = `rgba(65,105,255,${.1*(1-d/90)})`; ctx.lineWidth=.6; ctx.stroke();
+        }
+      });
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── FULL BG CANVAS — flowing dots ── */
+(function() {
+  const canvas = document.getElementById('bg-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, stars = [];
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+  for (let i = 0; i < 120; i++) {
+    stars.push({
+      x: Math.random()*W, y: Math.random()*H,
+      r: Math.random()*0.8+0.1,
+      o: Math.random()*0.15+0.02,
+      vx: (Math.random()-.5)*0.15,
+      vy: (Math.random()-.5)*0.15
+    });
+  }
+  function drawBg() {
+    ctx.clearRect(0,0,W,H);
+    stars.forEach(s => {
+      s.x += s.vx; s.y += s.vy;
+      if(s.x < 0) s.x = W; if(s.x > W) s.x = 0;
+      if(s.y < 0) s.y = H; if(s.y > H) s.y = 0;
+      ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+      ctx.fillStyle = `rgba(150,180,255,${s.o})`; ctx.fill();
+    });
+    requestAnimationFrame(drawBg);
+  }
+  drawBg();
+})();
+
+/* ── MOUSE PARALLAX ON PHOTO ── */
+(function() {
+  const scene = document.getElementById('photoScene');
+  if (!scene) return;
+  let tiltX = 0, tiltY = 0, targetX = 0, targetY = 0;
+  window.addEventListener('mousemove', e => {
+    const cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+    targetX = (e.clientY - cy) / cy * -8;
+    targetY = (e.clientX - cx) / cx * 8;
+  }, { passive: true });
+  function animate() {
+    tiltX += (targetX - tiltX) * 0.07;
+    tiltY += (targetY - tiltY) * 0.07;
+    scene.style.transform = `perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  const photo = document.getElementById('heroPhoto');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    if (scrolled < window.innerHeight && photo) {
+      photo.style.transform = `translateY(${scrolled * 0.18}px)`;
+    }
+  }, { passive: true });
+})();
+
+/* ── FORM SUBMIT ── */
+function handleSubmit(btn) {
+  const orig = btn.textContent;
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = '✓ Message Sent!'; btn.style.background = '#10b981';
+    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; }, 3000);
+  }, 1500);
+}
+
+/* ── ACTIVE NAV ── */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 200) cur = s.id; });
+  navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#'+cur ? 'var(--text)' : ''; });
+}, { passive: true });
+</script>
+</body>
+</html>
